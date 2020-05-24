@@ -1,0 +1,35 @@
+.header {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.phone {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.sort-block .sort-item {
+    padding-right: 20px;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.block-left {
+    position:fixed;
+    left:0;
+    top:0;
+    width:50%;
+    height:100%;
+    overflow:auto;
+}
+
+.block-right {
+    position:fixed;
+    right:0;
+    top:0;
+    width:50%;
+    height:100%;
+    overflow:auto;
+}

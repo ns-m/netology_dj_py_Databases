@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Каталог{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="header">
+            <h1>Сравнение телефонов</h1>
+        </div>
+
+        <div class="content">
+            <table>
+                    <tr>
+                    <th> Модель </th>
+                        {% for phone in phones %}
+                        <th> {% for elem in phone %}
+                            <span style='padding-left:40px; padding-right:40px;'> {{ elem.name }} </span>
+                        </th>
+                        {% endfor %}
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                    <th> Стоимость </th>
+                        {% for phone in phones %}
+                        <th> {% for elem in phone %}
+                            <span style='padding-left:40px; padding-right:40px;'> {{ elem.price }} </span>
+                        </th>
+                        {% endfor %}
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                    <th> Операционная система </th>
+                        {% for phone in phones %}
+                        <th> {% for elem in phone %}
+                            <span style='padding-left:40px; padding-right:40px;'> {{ elem.os }} </span>
+                        </th>
+                        {% endfor %}
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                    <th> Оперативная память </th>
+                        {% for phone in phones %}
+                        <th> {% for elem in phone %}
+                            <span style='padding-left:40px; padding-right:40px;'> {{ elem.ram }} </span>
+                        </th>
+                        {% endfor %}
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                    <th> Дата выпуска </th>
+                        {% for phone in phones %}
+                        <th> {% for elem in phone %}
+                            <span style='padding-left:40px; padding-right:40px;'> {{ elem.release_date }} </span>
+                        </th>
+                        {% endfor %}
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                    <th> Поддерживает LTE </th>
+                        {% for phone in phones %}
+                        <th> {% for elem in phone %}
+                            <span style='padding-left:40px; padding-right:40px;'> {% if elem.lte_exists %}
+                            Да
+                            {% else %}
+                            Нет
+                            {% endif %} </span>
+                        </th>
+                        {% endfor %}
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                    <th> Количество сим-карт </th>
+                        {% for phone in phones %}
+                        <th> {% for elem in phone %}
+                            <span style='padding-left:40px; padding-right:40px;'> {{ elem.sim_count }} </span>
+                        </th>
+                        {% endfor %}
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                    <th> Дисплей </th>
+                        {% for phone in phones %}
+                        <th> {% for elem in phone %}
+                            <span style='padding-left:40px; padding-right:40px;'> {{ elem.display }} </span>
+                        </th>
+                        {% endfor %}
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                    <th> Объем памяти </th>
+                        {% for phone in phones %}
+                        <th> {% for elem in phone %}
+                            <span style='padding-left:40px; padding-right:40px;'> {{ elem.memory_count }} </span>
+                        </th>
+                        {% endfor %}
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                    <th> Bluetooth </th>
+                        {% for phone in phones %}
+                        <th> {% for elem in phone %}
+                            <span style='padding-left:40px; padding-right:40px;'> {% if elem.bluetooth %}
+                             Да
+                            {% else %}
+                            Нет
+                            {% endif %} </span>
+                        </th>
+                        {% endfor %}
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                    <th> Цвет </th>
+                        {% for phone in phones %}
+                        <th> {% for elem in phone %}
+                            <span style='padding-left:40px; padding-right:40px;'> {{ elem.color }} </span>
+                        </th>
+                        {% endfor %}
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                    <th> Защита экрана </th>
+                        {% for phone in phones %}
+                        <th> {% for elem in phone %}
+                            {% if elem.screen_security %}
+                            <span style='padding-left:40px; padding-right:40px;'> {{ elem.screen_security}} </span>
+                            {% else %}
+                            -
+                            {% endif %}
+                        </th>
+                        {% endfor %}
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                    <th> Диктофон </th>
+                        {% for phone in phones %}
+                        <th> {% for elem in phone %}
+                            <span style='padding-left:40px; padding-right:40px;'> {% if elem.dictofon %}
+                            Да
+                            {% else %}
+                            -
+                            {% endif %} </span>
+                        </th>
+                        {% endfor %}
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                    <th> Наличие micro_sd </th>
+                        {% for phone in phones %}
+                        <th> {% for elem in phone %}
+                            <span style='padding-left:40px; padding-right:40px;'> {% if elem.micro_sd %}
+                            Да
+                            {% else %}
+                            -
+                            {% endif %} </span>
+                        </th>
+                        {% endfor %}
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                    <th> Объем памяти micro_sd </th>
+                        {% for phone in phones %}
+                        <th> {% for elem in phone %}
+                            <span style='padding-left:40px; padding-right:40px;'> {% if elem.micro_sd_memory %}
+                            {{ elem.micro_sd_memory }}
+                            {% else %}
+                            -
+                            {% endif %} </span>
+                        </th>
+                        {% endfor %}
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                    <th> Наличие моноброви </th>
+                        {% for phone in phones %}
+                        <th> {% for elem in phone %}
+                            <span style='padding-left:40px; padding-right:40px;'> {% if elem.micro_sd_memory %}
+                            Да
+                            {% else %}
+                            -
+                            {% endif %} </span>
+                        </th>
+                        {% endfor %}
+                        {% endfor %}
+                    </tr>
+
+            </table>
+        </div>
+    </div>
+{% endblock %}
